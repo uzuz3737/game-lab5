@@ -1,0 +1,2817 @@
+[gd_scene load_steps=60 format=3]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="e1"]
+
+[ext_resource type="Material" path="res://assets/materials/grass.tres" id="e2"]
+
+[ext_resource type="Material" path="res://assets/materials/stone.tres" id="e3"]
+
+[ext_resource type="Material" path="res://assets/materials/soil.tres" id="e4"]
+
+[ext_resource type="Material" path="res://assets/materials/cream.tres" id="e5"]
+
+[ext_resource type="Material" path="res://assets/materials/bark.tres" id="e6"]
+
+[ext_resource type="Material" path="res://assets/materials/leaf.tres" id="e7"]
+
+[ext_resource type="Material" path="res://assets/materials/leaflight.tres" id="e8"]
+
+[ext_resource type="Material" path="res://assets/materials/rock.tres" id="e9"]
+
+[ext_resource type="Material" path="res://assets/materials/gold.tres" id="e10"]
+
+[ext_resource type="PackedScene" path="res://assets/character/hooded_adventurer.glb" id="e11"]
+
+[ext_resource type="Script" path="res://scripts/portal.gd" id="e12"]
+
+[ext_resource type="Material" path="res://assets/materials/metal.tres" id="e13"]
+
+[ext_resource type="Material" path="res://assets/materials/orange.tres" id="e14"]
+
+[sub_resource type="ProceduralSkyMaterial" id="s1"]
+
+sky_top_color = Color(0.49412, 0.66667, 0.77255, 1)
+
+sky_horizon_color = Color(0.78431, 0.90196, 0.91373, 1)
+
+ground_bottom_color = Color(0.47059, 0.61569, 0.66275, 1)
+
+ground_horizon_color = Color(0.78431, 0.90196, 0.91373, 1)
+
+sky_curve = 0.2
+
+[sub_resource type="Sky" id="s2"]
+
+sky_material = SubResource("s1")
+
+[sub_resource type="Environment" id="s3"]
+
+background_mode = 2
+
+sky = SubResource("s2")
+
+ambient_light_source = 3
+
+ambient_light_color = Color(0.90588, 0.96078, 0.93725, 1)
+
+ambient_light_energy = 0.3
+
+tonemap_mode = 0
+
+tonemap_exposure = 0.7
+
+fog_enabled = true
+
+fog_light_color = Color(0.79608, 0.90588, 0.86275, 1)
+
+fog_density = 0.0015
+
+[sub_resource type="BoxMesh" id="s4"]
+
+size = Vector3(10.0000, 0.8000, 10.0000)
+
+[sub_resource type="BoxShape3D" id="s5"]
+
+size = Vector3(10.0000, 0.8000, 10.0000)
+
+[sub_resource type="BoxMesh" id="s6"]
+
+size = Vector3(10.2500, 0.3500, 10.2500)
+
+[sub_resource type="CylinderMesh" id="s7"]
+
+top_radius = 6.7
+
+bottom_radius = 1.2
+
+height = 4
+
+radial_segments = 5
+
+[sub_resource type="BoxMesh" id="s8"]
+
+size = Vector3(2.8000, 0.0220, 9.9000)
+
+[sub_resource type="CylinderMesh" id="s9"]
+
+top_radius = 0.18
+
+bottom_radius = 0.18
+
+height = 0.7
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s10"]
+
+top_radius = 0.18
+
+bottom_radius = 0.18
+
+height = 2.2
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s11"]
+
+top_radius = 0.15
+
+bottom_radius = 1.35
+
+height = 2.0
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s12"]
+
+top_radius = 0
+
+bottom_radius = 1.0
+
+height = 1.8
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="SphereMesh" id="s13"]
+
+radius = 0.45
+
+height = 0.65
+
+radial_segments = 6
+
+rings = 3
+
+[sub_resource type="CylinderMesh" id="s14"]
+
+top_radius = 0.45
+
+bottom_radius = 0.45
+
+height = 1.8
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="BoxMesh" id="s15"]
+
+size = Vector3(1.1000, 0.2500, 1.1000)
+
+[sub_resource type="CylinderMesh" id="s16"]
+
+top_radius = 0
+
+bottom_radius = 0.13
+
+height = 0.28
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s17"]
+
+top_radius = 4.47444
+
+bottom_radius = 0.3
+
+height = 4.72376
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s18"]
+
+top_radius = 2.8
+
+bottom_radius = 2.8
+
+height = 0.3
+
+radial_segments = 8
+
+rings = 1
+
+[sub_resource type="CylinderMesh" id="s19"]
+
+top_radius = 4.50067
+
+bottom_radius = 0.3
+
+height = 6.71223
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s20"]
+
+top_radius = 3.38223
+
+bottom_radius = 0.3
+
+height = 4.28148
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s21"]
+
+top_radius = 2.12158
+
+bottom_radius = 0.3
+
+height = 4.68829
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s22"]
+
+top_radius = 4.41405
+
+bottom_radius = 0.3
+
+height = 6.44537
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s23"]
+
+top_radius = 2.50774
+
+bottom_radius = 0.3
+
+height = 7.94876
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s24"]
+
+top_radius = 2.65888
+
+bottom_radius = 0.3
+
+height = 6.47225
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s25"]
+
+top_radius = 2.70188
+
+bottom_radius = 0.3
+
+height = 4.74958
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s26"]
+
+top_radius = 3.12195
+
+bottom_radius = 0.3
+
+height = 4.66884
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s27"]
+
+top_radius = 3.40038
+
+bottom_radius = 0.3
+
+height = 5.68773
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s28"]
+
+top_radius = 4.26685
+
+bottom_radius = 0.3
+
+height = 5.66905
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s29"]
+
+top_radius = 2.68864
+
+bottom_radius = 0.3
+
+height = 4.06422
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s30"]
+
+top_radius = 4.36217
+
+bottom_radius = 0.3
+
+height = 4.24865
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s31"]
+
+top_radius = 2.52151
+
+bottom_radius = 0.3
+
+height = 5.27433
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s32"]
+
+top_radius = 2.4647
+
+bottom_radius = 0.3
+
+height = 5.47157
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s33"]
+
+top_radius = 3.6909
+
+bottom_radius = 0.3
+
+height = 7.86288
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s34"]
+
+top_radius = 4.13966
+
+bottom_radius = 0.3
+
+height = 6.01488
+
+radial_segments = 5
+
+[sub_resource type="CylinderMesh" id="s35"]
+
+top_radius = 2.87795
+
+bottom_radius = 0.3
+
+height = 5.84415
+
+radial_segments = 5
+
+[sub_resource type="SphereMesh" id="s36"]
+
+radius = 2.2
+
+height = 2.2
+
+radial_segments = 8
+
+rings = 4
+
+[sub_resource type="SphereMesh" id="s37"]
+
+radius = 2.45
+
+height = 2.2
+
+radial_segments = 8
+
+rings = 4
+
+[sub_resource type="SphereMesh" id="s38"]
+
+radius = 2.7
+
+height = 2.2
+
+radial_segments = 8
+
+rings = 4
+
+[sub_resource type="BoxShape3D" id="s39"]
+
+size = Vector3(2.4000, 3.4000, 1.2000)
+
+[sub_resource type="BoxMesh" id="s40"]
+
+size = Vector3(0.6500, 3.4000, 0.7000)
+
+[sub_resource type="BoxMesh" id="s41"]
+
+size = Vector3(3.8000, 0.6000, 0.8000)
+
+[sub_resource type="BoxMesh" id="s42"]
+
+size = Vector3(4.0000, 0.2000, 2.0000)
+
+[sub_resource type="BoxMesh" id="s43"]
+
+size = Vector3(2.3500, 2.9500, 0.1200)
+
+[sub_resource type="BoxMesh" id="s44"]
+
+size = Vector3(0.0700, 2.8000, 0.0500)
+
+[sub_resource type="PrismMesh" id="s45"]
+
+size = Vector3(0.7000, 1.2000, 0.7000)
+
+[node name="SkyboundMenu" type="Node3D"]
+
+script = ExtResource("e1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+environment = SubResource("s3")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+
+rotation_degrees = Vector3(-48.0000, -30.0000, 0.0000)
+
+light_color = Color(1.00000, 0.94118, 0.81176, 1)
+
+light_energy = 0.5
+
+shadow_enabled = true
+
+directional_shadow_max_distance = 110
+
+[node name="Island01" type="Node3D" parent="."]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island01"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island01/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island01/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island01"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island01"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "01"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree0A" type="Node3D" parent="."]
+
+position = Vector3(-3.7000, 0.0000, -2.8000)
+
+scale = Vector3(1.0319, 1.0319, 1.0319)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree0A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree0A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree0A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree0B" type="Node3D" parent="."]
+
+position = Vector3(3.5000, 0.0000, 3.0000)
+
+scale = Vector3(0.8817, 0.8817, 0.8817)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree0B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree0B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree0B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock00" type="MeshInstance3D" parent="."]
+
+position = Vector3(-3.4000, 0.2200, 2.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock01" type="MeshInstance3D" parent="."]
+
+position = Vector3(-2.6500, 0.2200, 2.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock02" type="MeshInstance3D" parent="."]
+
+position = Vector3(-1.9000, 0.2200, 2.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin0" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0000, 0.9000, -3.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap0" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0000, 1.8500, -3.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower00" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.3000, 0.1300, -1.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower01" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.5400, 0.1300, -1.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower02" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.7800, 0.1300, -1.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower03" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0200, 0.1300, -1.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island02" type="Node3D" parent="."]
+
+position = Vector3(0.0000, 0.0000, -13.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island02"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island02/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island02/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island02"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island02"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "02"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree1A" type="Node3D" parent="."]
+
+position = Vector3(-3.7000, 0.0000, -15.8000)
+
+scale = Vector3(1.1952, 1.1952, 1.1952)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree1A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree1A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree1A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree1B" type="Node3D" parent="."]
+
+position = Vector3(3.5000, 0.0000, -10.0000)
+
+scale = Vector3(0.7035, 0.7035, 0.7035)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree1B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree1B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree1B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock10" type="MeshInstance3D" parent="."]
+
+position = Vector3(-3.4000, 0.2200, -10.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock11" type="MeshInstance3D" parent="."]
+
+position = Vector3(-2.6500, 0.2200, -10.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock12" type="MeshInstance3D" parent="."]
+
+position = Vector3(-1.9000, 0.2200, -10.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin1" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0000, 0.9000, -16.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap1" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0000, 1.8500, -16.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower10" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.3000, 0.1300, -14.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower11" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.5400, 0.1300, -14.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower12" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.7800, 0.1300, -14.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower13" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0200, 0.1300, -14.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island03" type="Node3D" parent="."]
+
+position = Vector3(5.0000, 0.0000, -26.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island03"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island03/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island03/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island03"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island03"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "03"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree2A" type="Node3D" parent="."]
+
+position = Vector3(1.3000, 0.0000, -28.8000)
+
+scale = Vector3(1.2051, 1.2051, 1.2051)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree2A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree2A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree2A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree2B" type="Node3D" parent="."]
+
+position = Vector3(8.5000, 0.0000, -23.0000)
+
+scale = Vector3(0.8091, 0.8091, 0.8091)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree2B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree2B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree2B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock20" type="MeshInstance3D" parent="."]
+
+position = Vector3(1.6000, 0.2200, -23.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock21" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.3500, 0.2200, -23.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock22" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.1000, 0.2200, -23.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin2" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0000, 0.9000, -29.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap2" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0000, 1.8500, -29.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower20" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.3000, 0.1300, -27.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower21" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.5400, 0.1300, -27.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower22" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.7800, 0.1300, -27.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower23" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0200, 0.1300, -27.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island04" type="Node3D" parent="."]
+
+position = Vector3(5.0000, 0.0000, -39.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island04"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island04/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island04/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island04"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island04"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "04"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree3A" type="Node3D" parent="."]
+
+position = Vector3(1.3000, 0.0000, -41.8000)
+
+scale = Vector3(0.9148, 0.9148, 0.9148)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree3A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree3A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree3A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree3B" type="Node3D" parent="."]
+
+position = Vector3(8.5000, 0.0000, -36.0000)
+
+scale = Vector3(0.8882, 0.8882, 0.8882)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree3B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree3B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree3B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock30" type="MeshInstance3D" parent="."]
+
+position = Vector3(1.6000, 0.2200, -36.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock31" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.3500, 0.2200, -36.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock32" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.1000, 0.2200, -36.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin3" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0000, 0.9000, -42.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap3" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0000, 1.8500, -42.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower30" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.3000, 0.1300, -40.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower31" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.5400, 0.1300, -40.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower32" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.7800, 0.1300, -40.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower33" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.0200, 0.1300, -40.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island05" type="Node3D" parent="."]
+
+position = Vector3(-1.0000, 0.0000, -52.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island05"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island05/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island05/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island05"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island05"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "05"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree4A" type="Node3D" parent="."]
+
+position = Vector3(-4.7000, 0.0000, -54.8000)
+
+scale = Vector3(0.9895, 0.9895, 0.9895)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree4A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree4A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree4A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree4B" type="Node3D" parent="."]
+
+position = Vector3(2.5000, 0.0000, -49.0000)
+
+scale = Vector3(0.7265, 0.7265, 0.7265)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree4B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree4B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree4B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock40" type="MeshInstance3D" parent="."]
+
+position = Vector3(-4.4000, 0.2200, -49.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock41" type="MeshInstance3D" parent="."]
+
+position = Vector3(-3.6500, 0.2200, -49.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock42" type="MeshInstance3D" parent="."]
+
+position = Vector3(-2.9000, 0.2200, -49.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin4" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0000, 0.9000, -55.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap4" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0000, 1.8500, -55.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower40" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.3000, 0.1300, -53.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower41" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.5400, 0.1300, -53.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower42" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.7800, 0.1300, -53.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower43" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0200, 0.1300, -53.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island06" type="Node3D" parent="."]
+
+position = Vector3(-1.0000, 0.0000, -65.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island06"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island06/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island06/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island06"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island06"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "06"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree5A" type="Node3D" parent="."]
+
+position = Vector3(-4.7000, 0.0000, -67.8000)
+
+scale = Vector3(1.0484, 1.0484, 1.0484)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree5A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree5A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree5A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree5B" type="Node3D" parent="."]
+
+position = Vector3(2.5000, 0.0000, -62.0000)
+
+scale = Vector3(0.7971, 0.7971, 0.7971)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree5B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree5B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree5B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock50" type="MeshInstance3D" parent="."]
+
+position = Vector3(-4.4000, 0.2200, -62.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock51" type="MeshInstance3D" parent="."]
+
+position = Vector3(-3.6500, 0.2200, -62.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock52" type="MeshInstance3D" parent="."]
+
+position = Vector3(-2.9000, 0.2200, -62.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin5" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0000, 0.9000, -68.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap5" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0000, 1.8500, -68.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower50" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.3000, 0.1300, -66.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower51" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.5400, 0.1300, -66.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower52" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.7800, 0.1300, -66.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower53" type="MeshInstance3D" parent="."]
+
+position = Vector3(3.0200, 0.1300, -66.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Island07" type="Node3D" parent="."]
+
+position = Vector3(4.0000, 0.0000, -78.0000)
+
+[node name="Ground" type="StaticBody3D" parent="Island07"]
+
+position = Vector3(0.0000, -0.4000, 0.0000)
+
+[node name="Mesh" type="MeshInstance3D" parent="Island07/Ground"]
+
+position = Vector3(0.0000, 0.0000, 0.0000)
+
+mesh = SubResource("s4")
+
+material_override = ExtResource("e2")
+
+[node name="Collision" type="CollisionShape3D" parent="Island07/Ground"]
+
+shape = SubResource("s5")
+
+[node name="StoneRim" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(0.0000, -0.9500, 0.0000)
+
+mesh = SubResource("s6")
+
+material_override = ExtResource("e3")
+
+[node name="FloatingRock" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(0.0000, -3.0000, 0.0000)
+
+mesh = SubResource("s7")
+
+material_override = ExtResource("e4")
+
+[node name="Path" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(0.0000, 0.0140, 0.0000)
+
+mesh = SubResource("s8")
+
+material_override = ExtResource("e5")
+
+[node name="Corner-1-1" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(-4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner-11" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(-4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner1-1" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(4.6500, 0.3500, -4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="Corner11" type="MeshInstance3D" parent="Island07"]
+
+position = Vector3(4.6500, 0.3500, 4.6500)
+
+mesh = SubResource("s9")
+
+material_override = ExtResource("e3")
+
+[node name="IslandNumber" type="Label3D" parent="Island07"]
+
+position = Vector3(-3.0000, 0.0800, 3.2000)
+
+text = "07"
+
+font_size = 30
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="Tree6A" type="Node3D" parent="."]
+
+position = Vector3(0.3000, 0.0000, -80.8000)
+
+scale = Vector3(0.9435, 0.9435, 0.9435)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree6A"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree6A"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree6A"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Tree6B" type="Node3D" parent="."]
+
+position = Vector3(7.5000, 0.0000, -75.0000)
+
+scale = Vector3(0.8217, 0.8217, 0.8217)
+
+[node name="Trunk" type="MeshInstance3D" parent="Tree6B"]
+
+position = Vector3(0.0000, 1.1000, 0.0000)
+
+mesh = SubResource("s10")
+
+material_override = ExtResource("e6")
+
+[node name="Crown" type="MeshInstance3D" parent="Tree6B"]
+
+position = Vector3(0.0000, 2.2000, 0.0000)
+
+mesh = SubResource("s11")
+
+material_override = ExtResource("e7")
+
+[node name="CrownTop" type="MeshInstance3D" parent="Tree6B"]
+
+position = Vector3(0.0000, 3.2500, 0.0000)
+
+mesh = SubResource("s12")
+
+material_override = ExtResource("e8")
+
+[node name="Rock60" type="MeshInstance3D" parent="."]
+
+position = Vector3(0.6000, 0.2200, -75.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock61" type="MeshInstance3D" parent="."]
+
+position = Vector3(1.3500, 0.2200, -75.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Rock62" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.1000, 0.2200, -75.5000)
+
+mesh = SubResource("s13")
+
+material_override = ExtResource("e9")
+
+[node name="Ruin6" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.0000, 0.9000, -81.2000)
+
+mesh = SubResource("s14")
+
+material_override = ExtResource("e3")
+
+[node name="RuinCap6" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.0000, 1.8500, -81.2000)
+
+mesh = SubResource("s15")
+
+material_override = ExtResource("e5")
+
+[node name="Flower60" type="MeshInstance3D" parent="."]
+
+position = Vector3(7.3000, 0.1300, -79.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower61" type="MeshInstance3D" parent="."]
+
+position = Vector3(7.5400, 0.1300, -79.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower62" type="MeshInstance3D" parent="."]
+
+position = Vector3(7.7800, 0.1300, -79.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="Flower63" type="MeshInstance3D" parent="."]
+
+position = Vector3(8.0200, 0.1300, -79.0000)
+
+mesh = SubResource("s16")
+
+material_override = ExtResource("e10")
+
+[node name="DistantIslet0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-24.1971, -4.8751, -2.6093)
+
+mesh = SubResource("s17")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-24.1971, -2.5751, -2.6093)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet1" type="MeshInstance3D" parent="."]
+
+position = Vector3(24.2199, -3.5834, -32.2883)
+
+mesh = SubResource("s19")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop1" type="MeshInstance3D" parent="."]
+
+position = Vector3(24.2199, -1.2834, -32.2883)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet2" type="MeshInstance3D" parent="."]
+
+position = Vector3(22.6308, -7.1953, -69.1664)
+
+mesh = SubResource("s20")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop2" type="MeshInstance3D" parent="."]
+
+position = Vector3(22.6308, -4.8953, -69.1664)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet3" type="MeshInstance3D" parent="."]
+
+position = Vector3(-24.2388, -3.6242, -76.0212)
+
+mesh = SubResource("s21")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop3" type="MeshInstance3D" parent="."]
+
+position = Vector3(-24.2388, -1.3242, -76.0212)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet4" type="MeshInstance3D" parent="."]
+
+position = Vector3(-28.3558, -5.7655, 4.7856)
+
+mesh = SubResource("s22")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop4" type="MeshInstance3D" parent="."]
+
+position = Vector3(-28.3558, -3.4655, 4.7856)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet5" type="MeshInstance3D" parent="."]
+
+position = Vector3(23.0766, -5.5257, 0.2101)
+
+mesh = SubResource("s23")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop5" type="MeshInstance3D" parent="."]
+
+position = Vector3(23.0766, -3.2257, 0.2101)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet6" type="MeshInstance3D" parent="."]
+
+position = Vector3(26.0612, -5.6100, -39.7042)
+
+mesh = SubResource("s24")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop6" type="MeshInstance3D" parent="."]
+
+position = Vector3(26.0612, -3.3100, -39.7042)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet7" type="MeshInstance3D" parent="."]
+
+position = Vector3(31.1631, -7.3764, 2.3394)
+
+mesh = SubResource("s25")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop7" type="MeshInstance3D" parent="."]
+
+position = Vector3(31.1631, -5.0764, 2.3394)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet8" type="MeshInstance3D" parent="."]
+
+position = Vector3(-19.5117, -3.2473, -73.8203)
+
+mesh = SubResource("s26")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop8" type="MeshInstance3D" parent="."]
+
+position = Vector3(-19.5117, -0.9473, -73.8203)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet9" type="MeshInstance3D" parent="."]
+
+position = Vector3(21.9084, -5.5189, -50.0994)
+
+mesh = SubResource("s27")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop9" type="MeshInstance3D" parent="."]
+
+position = Vector3(21.9084, -3.2189, -50.0994)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet10" type="MeshInstance3D" parent="."]
+
+position = Vector3(21.6787, -7.4464, 18.4768)
+
+mesh = SubResource("s28")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop10" type="MeshInstance3D" parent="."]
+
+position = Vector3(21.6787, -5.1464, 18.4768)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet11" type="MeshInstance3D" parent="."]
+
+position = Vector3(-27.3311, -4.9493, -27.7243)
+
+mesh = SubResource("s29")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop11" type="MeshInstance3D" parent="."]
+
+position = Vector3(-27.3311, -2.6493, -27.7243)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet12" type="MeshInstance3D" parent="."]
+
+position = Vector3(24.2462, -6.6991, -8.4363)
+
+mesh = SubResource("s30")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop12" type="MeshInstance3D" parent="."]
+
+position = Vector3(24.2462, -4.3991, -8.4363)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet13" type="MeshInstance3D" parent="."]
+
+position = Vector3(-27.4137, -3.4884, -86.4083)
+
+mesh = SubResource("s31")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop13" type="MeshInstance3D" parent="."]
+
+position = Vector3(-27.4137, -1.1884, -86.4083)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet14" type="MeshInstance3D" parent="."]
+
+position = Vector3(-22.5414, -4.4951, 16.3139)
+
+mesh = SubResource("s32")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop14" type="MeshInstance3D" parent="."]
+
+position = Vector3(-22.5414, -2.1951, 16.3139)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet15" type="MeshInstance3D" parent="."]
+
+position = Vector3(31.4013, -7.5357, 16.8655)
+
+mesh = SubResource("s33")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop15" type="MeshInstance3D" parent="."]
+
+position = Vector3(31.4013, -5.2357, 16.8655)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet16" type="MeshInstance3D" parent="."]
+
+position = Vector3(-17.1672, -7.9213, -22.2971)
+
+mesh = SubResource("s34")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop16" type="MeshInstance3D" parent="."]
+
+position = Vector3(-17.1672, -5.6213, -22.2971)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="DistantIslet17" type="MeshInstance3D" parent="."]
+
+position = Vector3(-20.2272, -4.5455, -11.0176)
+
+mesh = SubResource("s35")
+
+material_override = ExtResource("e4")
+
+[node name="DistantTop17" type="MeshInstance3D" parent="."]
+
+position = Vector3(-20.2272, -2.2455, -11.0176)
+
+mesh = SubResource("s18")
+
+material_override = ExtResource("e2")
+
+[node name="Cloud0_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-18.9520, -6.5800, 0.8010)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud0_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-16.9520, -6.5800, 0.8010)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud0_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-14.9520, -6.5800, 0.8010)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud1_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-20.3567, -6.6182, 7.1851)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud1_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-18.3567, -6.6182, 7.1851)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud1_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-16.3567, -6.6182, 7.1851)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud2_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-5.7054, -7.9899, -35.5111)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud2_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-3.7054, -7.9899, -35.5111)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud2_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-1.7054, -7.9899, -35.5111)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud3_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-19.1887, -3.0939, -7.0518)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud3_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-17.1887, -3.0939, -7.0518)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud3_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-15.1887, -3.0939, -7.0518)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud4_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-14.2399, -7.7152, -40.3864)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud4_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-12.2399, -7.7152, -40.3864)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud4_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-10.2399, -7.7152, -40.3864)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud5_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-1.0747, -5.4895, -55.0345)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud5_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(0.9253, -5.4895, -55.0345)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud5_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.9253, -5.4895, -55.0345)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud6_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-18.1247, -3.4339, -60.7566)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud6_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-16.1247, -3.4339, -60.7566)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud6_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-14.1247, -3.4339, -60.7566)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud7_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(24.9449, -7.6494, -54.9925)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud7_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(26.9449, -7.6494, -54.9925)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud7_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(28.9449, -7.6494, -54.9925)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud8_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(-40.3094, -7.3477, -87.9361)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud8_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(-38.3094, -7.3477, -87.9361)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud8_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(-36.3094, -7.3477, -87.9361)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud9_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(7.4380, -7.3504, -34.8711)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud9_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(9.4380, -7.3504, -34.8711)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud9_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(11.4380, -7.3504, -34.8711)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud10_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(34.0378, -4.4524, -16.2038)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud10_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(36.0378, -4.4524, -16.2038)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud10_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(38.0378, -4.4524, -16.2038)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud11_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(35.6000, -3.4859, -60.7701)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud11_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(37.6000, -3.4859, -60.7701)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud11_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(39.6000, -3.4859, -60.7701)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud12_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(42.8522, -7.7708, 13.6002)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud12_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(44.8522, -7.7708, 13.6002)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud12_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(46.8522, -7.7708, 13.6002)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud13_0" type="MeshInstance3D" parent="."]
+
+position = Vector3(31.5704, -7.4661, 23.0404)
+
+mesh = SubResource("s36")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud13_1" type="MeshInstance3D" parent="."]
+
+position = Vector3(33.5704, -7.4661, 23.0404)
+
+mesh = SubResource("s37")
+
+material_override = ExtResource("e5")
+
+[node name="Cloud13_2" type="MeshInstance3D" parent="."]
+
+position = Vector3(35.5704, -7.4661, 23.0404)
+
+mesh = SubResource("s38")
+
+material_override = ExtResource("e5")
+
+[node name="PreviewCharacter" parent="." instance=ExtResource("e11")]
+
+position = Vector3(2.0000, 0.0000, 2.0000)
+
+rotation = Vector3(0.0000, 0.4000, 0.0000)
+
+[node name="Portal" type="Area3D" parent="."]
+
+position = Vector3(4.0000, 0.0000, -14.0000)
+
+script = ExtResource("e12")
+
+collision_layer = 0
+
+collision_mask = 2
+
+[node name="Trigger" type="CollisionShape3D" parent="Portal"]
+
+shape = SubResource("s39")
+
+[node name="Left" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(-1.5500, 1.7000, 0.0000)
+
+mesh = SubResource("s40")
+
+material_override = ExtResource("e3")
+
+[node name="Right" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(1.5500, 1.7000, 0.0000)
+
+mesh = SubResource("s40")
+
+material_override = ExtResource("e3")
+
+[node name="Lintel" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(0.0000, 3.4000, 0.0000)
+
+mesh = SubResource("s41")
+
+material_override = ExtResource("e3")
+
+[node name="Step" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(0.0000, 0.0500, 0.4000)
+
+mesh = SubResource("s42")
+
+material_override = ExtResource("e13")
+
+[node name="Core" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(0.0000, 1.8000, 0.0000)
+
+mesh = SubResource("s43")
+
+material_override = ExtResource("e14")
+
+[node name="Trim-1" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(-1.1700, 1.8000, 0.1000)
+
+mesh = SubResource("s44")
+
+material_override = ExtResource("e10")
+
+[node name="Trim1" type="MeshInstance3D" parent="Portal"]
+
+position = Vector3(1.1700, 1.8000, 0.1000)
+
+mesh = SubResource("s44")
+
+material_override = ExtResource("e10")
+
+[node name="Status" type="Label3D" parent="Portal"]
+
+position = Vector3(0.0000, 4.1000, 0.0000)
+
+text = "COLLECT ALL CRYSTALS"
+
+font_size = 28
+
+pixel_size = 0.009
+
+modulate = Color(0.06275, 0.16863, 0.21961, 1)
+
+outline_size = 3
+
+billboard = 1
+
+no_depth_test = false
+
+visibility_range_begin = 5.0
+
+visibility_range_end = 45.0
+
+[node name="MenuGem0" type="MeshInstance3D" parent="."]
+
+position = Vector3(0.0000, 1.3000, -3.0000)
+
+mesh = SubResource("s45")
+
+material_override = ExtResource("e10")
+
+[node name="MenuGem1" type="MeshInstance3D" parent="."]
+
+position = Vector3(2.0000, 1.3000, -8.0000)
+
+mesh = SubResource("s45")
+
+material_override = ExtResource("e10")
+
+[node name="MenuGem2" type="MeshInstance3D" parent="."]
+
+position = Vector3(4.0000, 1.3000, -12.0000)
+
+mesh = SubResource("s45")
+
+material_override = ExtResource("e10")
+
+[node name="MenuCamera" type="Camera3D" parent="."]
+
+position = Vector3(21.0000, 18.0000, 25.0000)
+
+rotation_degrees = Vector3(-27.0000, 34.0000, 0.0000)
+
+fov = 52
+
+current = true
+
+far = 250
